@@ -114,6 +114,48 @@
       </div>
     </section>
   </main>
+
+  <div class="music-player" id="musicPlayer">
+    <audio id="birthdaySong" preload="auto" loop>
+      <source src="best-part.mp3" type="audio/mpeg">
+    </audio>
+    <button class="music-btn" id="musicBtn" aria-label="Play our song">
+      <span class="music-icon">♪</span>
+      <span class="music-label" id="musicLabel">Play our song ♡</span>
+    </button>
+  </div>
+
+  <style>
+    .music-player{position:fixed;right:22px;bottom:22px;z-index:50}
+    .music-btn{display:flex;align-items:center;gap:10px;border:1px solid rgba(255,255,255,.18);background:rgba(21,17,15,.78);color:#fff;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);padding:11px 16px;border-radius:999px;font:400 12px/1 Inter,sans-serif;letter-spacing:.04em;cursor:pointer;box-shadow:0 10px 30px rgba(0,0,0,.18);transition:transform .25s ease,background .25s ease}
+    .music-btn:hover{transform:translateY(-2px);background:rgba(21,17,15,.9)}
+    .music-icon{font-size:17px;line-height:1}
+    .music-btn.playing .music-icon{animation:musicPulse 1.2s ease-in-out infinite}
+    @keyframes musicPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.18)}}
+    @media(max-width:600px){.music-player{right:14px;bottom:14px}.music-btn{padding:10px 13px}.music-label{font-size:11px}}
+  </style>
+
+  <script>
+    const birthdaySong = document.getElementById("birthdaySong");
+    const musicBtn = document.getElementById("musicBtn");
+    const musicLabel = document.getElementById("musicLabel");
+
+    musicBtn.addEventListener("click", async () => {
+      if (birthdaySong.paused) {
+        try {
+          await birthdaySong.play();
+          musicBtn.classList.add("playing");
+          musicLabel.textContent = "Playing our song ♡";
+        } catch (err) {
+          musicLabel.textContent = "Tap to play ♡";
+        }
+      } else {
+        birthdaySong.pause();
+        musicBtn.classList.remove("playing");
+        musicLabel.textContent = "Play our song ♡";
+      }
+    });
+  </script>
   <button class="top-btn" id="topBtn" aria-label="Back to top">↑</button>
   <script src="script.js"></script>
 </body>
