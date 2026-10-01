@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#15110f">
+  <title>For Sayang — 2 October 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="grain"></div>
+
+  <main>
+    <section class="hero">
+      <div class="hero-photo">
+        <img src="memory-1.jpg" alt="A memory together">
+      </div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="eyebrow">A little something for you</p>
+        <h1>Happy Birthday,<br><em>Sayang.</em></h1>
+        <p class="hero-sub">26 looks beautiful on you.</p>
+        <button class="scroll-btn" onclick="document.querySelector('#letter').scrollIntoView({behavior:'smooth'})">
+          <span>Open your letter</span><span class="arrow">↓</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="intro section">
+      <p class="eyebrow">02 · 10 · 2026</p>
+      <h2>Some moments are<br><em>worth keeping.</em></h2>
+      <p class="lead">
+        Out of all the ordinary days we've had, somehow, these little moments
+        became the ones I want to remember.
+      </p>
+    </section>
+
+    <section class="gallery section">
+      <div class="section-head">
+        <span>01</span>
+        <h3>Our little memories</h3>
+      </div>
+      <div class="masonry">
+        <figure><img src="memory-2.jpg" alt="Memory"><figcaption>Just us.</figcaption></figure>
+        <figure><img src="memory-3.jpg" alt="Memory"><figcaption>The little things.</figcaption></figure>
+        <figure><img src="memory-4.jpg" alt="Memory"><figcaption>Somewhere along the way.</figcaption></figure>
+        <figure><img src="memory-5.jpg" alt="Memory"><figcaption>Still my favourite view.</figcaption></figure>
+        <figure><img src="memory-6.jpg" alt="Memory"><figcaption>A day worth remembering.</figcaption></figure>
+        <figure><img src="memory-7.jpg" alt="Memory"><figcaption>And all the random moments.</figcaption></figure>
+        <figure><img src="memory-8.jpg" alt="Memory"><figcaption>Laughs I wouldn't trade.</figcaption></figure>
+        <figure><img src="memory-9.jpg" alt="Memory"><figcaption>Quiet moments, too.</figcaption></figure>
+        <figure><img src="memory-10.jpg" alt="Memory"><figcaption>Us, in our own little world.</figcaption></figure>
+      </div>
+    </section>
+
+    <section id="letter" class="letter section">
+      <div class="letter-card">
+        <p class="eyebrow">02</p>
+        <h2>For you, <em>Sayang.</em></h2>
+        <div class="letter-text">
+          <p>Happy 26th birthday, sayang.</p>
+          <p>
+            I don't think I need a special occasion to tell you how much you mean
+            to me, but today gives me another reason to say it properly.
+          </p>
+          <p>
+            Thank you for being part of my days — for the laughs, the quiet
+            moments, the random conversations, and even the little things that
+            probably seemed ordinary at the time. Somehow, those ordinary things
+            became some of my favourite memories.
+          </p>
+          <p>
+            I hope 26 brings you more peace, more reasons to smile, and more
+            moments that make you genuinely happy. I hope you keep becoming the
+            person you want to be, at your own pace, without ever feeling like
+            you have to rush.
+          </p>
+          <p>
+            And if life gets difficult sometimes, I hope you remember that you
+            don't have to face every difficult day alone.
+          </p>
+          <p class="signature">
+            Happy birthday, my Sayang.<br>
+            Here's to more memories, more laughter,<br>
+            and more ordinary days that somehow become special.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="countdown section">
+      <p class="eyebrow">03</p>
+      <h2>A new chapter<br><em>begins today.</em></h2>
+      <div class="timer" id="timer">
+        <div><strong id="days">00</strong><span>days</span></div>
+        <div><strong id="hours">00</strong><span>hours</span></div>
+        <div><strong id="minutes">00</strong><span>minutes</span></div>
+        <div><strong id="seconds">00</strong><span>seconds</span></div>
+      </div>
+      <p class="countdown-note" id="countdown-note">Counting down to your birthday...</p>
+    </section>
+
+    <section class="finale section">
+      <div class="finale-photo">
+        <img src="memory-1.jpg" alt="Our favourite memory">
+      </div>
+      <div class="finale-content">
+        <p class="eyebrow">One last thing</p>
+        <h2>I'm glad<br><em>it's you.</em></h2>
+        <p>
+          Of all the places we could have been, all the people we could have
+          met, and all the days that could have passed us by — I'm grateful
+          some of them brought me to you.
+        </p>
+        <div class="heart">♡</div>
+        <p class="small">Happy Birthday, Sayang · 26</p>
+      </div>
+    </section>
+  </main>
+
+  <button class="top-btn" id="topBtn" aria-label="Back to top">↑</button>
+  <script src="script.js"></script>
+</body>
+</html>
